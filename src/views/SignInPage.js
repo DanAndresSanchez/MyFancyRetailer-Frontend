@@ -22,7 +22,7 @@ class SignInPage extends Component {
     }
 
     onSubmitSignIn = () => {
-        var fullName = this.state.signInName.split(" ");
+        let fullName = this.state.signInName.split(" ");
         fetch('https://infinite-woodland-98501.herokuapp.com/signin', {
             method: 'post',
             headers: {'Content-Type': 'application/json'},

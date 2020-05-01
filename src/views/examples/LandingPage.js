@@ -36,9 +36,9 @@ class LandingPage extends Component{
     }
   }
   async componentDidMount() {
-    const response = await axios.get('https://infinitw-woodland-98501.herokuapp.com');
+    const response = await fetch('infinite-woodland-98501.herokuapp.com');
     const data = await response.json();
-    this.setState({products: response})
+    this.setState({products: data})
   }
 
 
