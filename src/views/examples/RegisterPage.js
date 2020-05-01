@@ -42,7 +42,7 @@ class RegisterPage extends Component {
   }
 
   onSubmitRegister = () => {
-    fetch('http://localhost:3000/register-page', {
+    fetch('https://infinite-woodland-98501.herokuapp.com/register-page', {
       method: 'post',
       headers: {'Content-Type': 'application/json'},
       body: JSON.stringify({

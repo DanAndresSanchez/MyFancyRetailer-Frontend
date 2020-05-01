@@ -17,7 +17,7 @@
 
 */
 import React, { Component } from "react";
-
+import axios from 'axios';
 // reactstrap components
 import {Container, Row, Col} from "reactstrap";
 
@@ -29,18 +29,18 @@ import ProductCard from "../../components/ProductCard";
 import Searchbar from "../../components/Searchbar";
 
 class LandingPage extends Component{
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
     this.state = {
       products: []
     }
   }
-
   async componentDidMount() {
-    const response = await fetch('http://localhost:3000/');
+    const response = await axios.get('https://infinitw-woodland-98501.herokuapp.com');
     const data = await response.json();
-    this.setState({products: data})
+    this.setState({products: response})
   }
+
 
   render() {
     return (

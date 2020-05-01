@@ -16,7 +16,7 @@ class AllProductsPage extends Component{
 
 
     async componentDidMount() {
-        const response = await fetch('http://localhost:3000/products');
+        const response = await fetch('https://infinite-woodland-98501.herokuapp.com/products');
         const data = await response.json();
         this.setState({products: data})
     }
