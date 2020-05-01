@@ -23,7 +23,7 @@ class SingleProductPage extends Component{
     }
 
     async componentDidMount() {
-        const response = await fetch('http://localhost:3000/products/'+ window.location.href.slice(-2));
+        const response = await fetch('https://infinite-woodland-98501.herokuapp.com/products/'+ window.location.href.slice(-2));
         const data = await response.json();
         await this.setState({UPC: data.UPC})
         await this.setState({Pname: data.Pname})

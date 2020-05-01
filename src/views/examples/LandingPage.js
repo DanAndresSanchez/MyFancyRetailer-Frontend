@@ -36,7 +36,7 @@ class LandingPage extends Component{
     }
   }
   async componentDidMount() {
-    const response = await fetch('infinite-woodland-98501.herokuapp.com');
+    const response = await fetch('https://infinite-woodland-98501.herokuapp.com/');
     const data = await response.json();
     this.setState({products: data})
   }
